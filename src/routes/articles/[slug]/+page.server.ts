@@ -2,6 +2,7 @@ import { Client } from '@notionhq/client';
 import * as dotenv from 'dotenv';
 import type { PageServerLoad } from './$types';
 dotenv.config();
+export const ssr = true;
 
 export const load: PageServerLoad = async ({ params }) => {
 	if (params.slug === 'hacks-reentrancy') {
@@ -11,7 +12,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		let objects: any[] = [];
 		let title = '';
 		let category = '';
-		for (let i = 0; i < 20; i++) {
+		for (let i = 0; i < 24; i++) {
 			//@ts-ignore
 			// console.log('Type -->', response.results[i].type);
 			//@ts-ignore
