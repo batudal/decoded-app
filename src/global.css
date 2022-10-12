@@ -109,6 +109,7 @@ h4 {
 	-webkit-background-clip: text;
 	/* Make the text fill color value transparent so the masked background color comes through */
 	-webkit-text-fill-color: transparent;
+	margin: 0px;
 }
 
 .button {

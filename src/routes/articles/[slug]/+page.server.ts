@@ -1,5 +1,4 @@
 import { Client } from '@notionhq/client';
-import type { BlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import * as dotenv from 'dotenv';
 import type { PageServerLoad } from './$types';
 dotenv.config();
@@ -9,25 +8,56 @@ export const load: PageServerLoad = async ({ params }) => {
 		const notion = new Client({ auth: process.env.NOTION_KEY });
 		const databaseId: any = process.env.NOTION_DATABASE_ID;
 		const response = await notion.blocks.children.list({ block_id: databaseId });
-		// console.log('Response --> ', response);
-		let paragraphs: string[] = [];
+		let objects: any[] = [];
 		let title = '';
-		for (let i = 0; i < 10; i++) {
+		let category = '';
+		for (let i = 0; i < 20; i++) {
+			//@ts-ignore
+			// console.log('Type -->', response.results[i].type);
 			//@ts-ignore
 			if (response.results[i].type == 'paragraph') {
 				//@ts-ignore
-				let paragraph = response.results[i].paragraph.rich_text[0].plain_text;
-				console.log('Parapgrah:', paragraph);
-				paragraphs.push(paragraph);
+				objects.push({
+					type: 'p',
+					//@ts-ignore
+					content: response.results[i].paragraph.rich_text[0].plain_text
+				});
 				//@ts-ignore
 			} else if (response.results[i].type == 'heading_1') {
 				//@ts-ignore
 				title = response.results[i].heading_1.rich_text[0].plain_text;
+				//@ts-ignore
+			} else if (response.results[i].type == 'heading_3') {
+				//@ts-ignore
+				objects.push({
+					type: 'h2',
+					//@ts-ignore
+					content: response.results[i].heading_3.rich_text[0].plain_text
+				});
+				//@ts-ignore
+			} else if (response.results[i].type == 'toggle') {
+				//@ts-ignore
+				category = response.results[i].toggle.rich_text[0].plain_text;
+				//@ts-ignore
+			} else if (response.results[i].type == 'image') {
+				objects.push({
+					type: 'img',
+					//@ts-ignore
+					content: response.results[i].image.file.url
+				});
+				//@ts-ignore
+			} else if (response.results[i].type == 'to_do') {
+				objects.push({
+					type: 'to_do',
+					//@ts-ignore
+					content: response.results[i].to_do.rich_text[0].plain_text
+				});
 			}
 		}
 		return {
-			paragraphs,
-			title
+			objects,
+			title,
+			category
 		};
 	}
 };
