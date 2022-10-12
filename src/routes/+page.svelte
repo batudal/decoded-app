@@ -15,6 +15,7 @@
 <Banner />
 <div style="height:160px" />
 <Projects />
+<div style="height:40px" />
 <BuildingOn />
 <div style="height:160px" />
 <Collabs />

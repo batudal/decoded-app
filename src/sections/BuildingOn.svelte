@@ -11,7 +11,6 @@
 	];
 </script>
 
-<div style="height:40px" />
 <main>
 	<p>Currently building on</p>
 	<div class="images">

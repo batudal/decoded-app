@@ -5,7 +5,6 @@
 
 <main>
 	<Header />
-
 	<slot />
 	<Footer />
 </main>
