@@ -32,7 +32,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 48px;
+		padding: 24px;
 	}
 	.socials {
 		display: flex;

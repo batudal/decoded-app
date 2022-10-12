@@ -1,14 +1,14 @@
 <script lang="ts">
 	import Dropdown from '../components/Dropdown.svelte';
 	let email: string;
-	let chosen: string = 'Field of interest';
 	let foi: string;
 	let message: string;
 	let result = null;
 
 	// rework with event dispatcher
 	const postData = async () => {
-		if (chosen == 'Field of interest') {
+		if (!foi) {
+			console.log('Foi:', foi);
 			return;
 		} else {
 			const res = await fetch('https://api.decoded-labs.com/api/collections/submission/records', {
@@ -20,11 +20,14 @@
 					foi: foi
 				})
 			});
-
 			const json = await res.json();
 			result = JSON.stringify(json);
 			console.log(result);
 		}
+	};
+	const handleFOI = (event: any) => {
+		console.log('Event!');
+		foi = event.detail.text;
 	};
 </script>
 
@@ -34,11 +37,11 @@
 	<div style="height:36px;" />
 	<div class="form-group">
 		<input bind:value={email} type="text" placeholder="Enter your email" required />
-		<Dropdown />
+		<Dropdown on:foi={handleFOI} />
 		<textarea bind:value={message} placeholder="Your message" required />
-		<a class="button" href="#contact">
+		<div class="button" on:click={postData} on:keydown>
 			<p>Send message</p>
-		</a>
+		</div>
 	</div>
 	<div style="height:120px;" />
 </main>

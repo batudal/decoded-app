@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { gsap } from 'gsap';
 	import { slide } from 'svelte/transition';
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
 
 	let open = false;
 	let chosen = 'Field of interest';
-
 	let items = [
 		{ title: 'Smart Contract Development', fieldOfInterest: 'smartcontractdevelopment' },
 		{ title: 'Fullstack Development', fieldOfInterest: 'fullstackdevelopment' },
@@ -20,8 +22,11 @@
 		}
 		open = !open;
 	};
-	const setItem = async (title: any) => {
-		chosen = title;
+	const setItem = async (_index: number) => {
+		chosen = items[_index].title;
+		dispatch('foi', {
+			text: items[_index].fieldOfInterest
+		});
 	};
 </script>
 
@@ -32,9 +37,9 @@
 	</div>
 	{#if open}
 		<div class="dropdown" transition:slide={{ duration: 200 }}>
-			{#each items as i}
-				<div on:click={() => setItem(i.title)} class="item" on:keydown>
-					{i.title}
+			{#each items as item, index}
+				<div on:click={() => setItem(index)} class="item" on:keydown>
+					{item.title}
 				</div>
 			{/each}
 		</div>

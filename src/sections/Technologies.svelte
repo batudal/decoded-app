@@ -2,7 +2,7 @@
 	<img src="/images/rocket.png" alt="rocket" />
 	<div style="width:64px" />
 	<div class="content">
-		<h3>Technologies we love and use</h3>
+		<h2>Technologies we love and use</h2>
 		<div style="height:32px" />
 		<div class="items">
 			{#each Array(18) as _, i}
