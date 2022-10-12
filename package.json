@@ -32,6 +32,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@notionhq/client": "^2.2.1",
+		"dotenv": "^16.0.3",
 		"gsap": "^3.11.3"
 	}
 }

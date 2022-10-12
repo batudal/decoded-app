@@ -3,9 +3,8 @@
 	let email: string;
 	let foi: string;
 	let message: string;
-	let result = null;
+	let result;
 
-	// rework with event dispatcher
 	const postData = async () => {
 		if (!foi) {
 			console.log('Foi:', foi);
@@ -25,10 +24,7 @@
 			console.log(result);
 		}
 	};
-	const handleFOI = (event: any) => {
-		console.log('Event!');
-		foi = event.detail.text;
-	};
+	const handleFOI = (event: any) => (foi = event.detail.text);
 </script>
 
 <main>
