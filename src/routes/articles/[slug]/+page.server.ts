@@ -3,7 +3,6 @@ import * as dotenv from 'dotenv';
 import type { PageServerLoad } from './$types';
 dotenv.config();
 export const ssr = true;
-
 export const load: PageServerLoad = async ({ params }) => {
 	if (params.slug === 'hacks-reentrancy') {
 		const notion = new Client({ auth: process.env.NOTION_KEY });
@@ -15,9 +14,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		for (let i = 0; i < 24; i++) {
 			//@ts-ignore
 			// console.log('Type -->', response.results[i].type);
-			//@ts-ignore
 			if (response.results[i].type == 'paragraph') {
-				//@ts-ignore
 				objects.push({
 					type: 'p',
 					//@ts-ignore

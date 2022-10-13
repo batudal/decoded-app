@@ -17,7 +17,7 @@
 				<div style="height:48px" />
 			{:else}
 				{#if obj.type == 'h2'}
-					<div style="height:24px" />
+					<div style="height:48px" />
 				{/if}
 				<svelte:element this={obj.type}>
 					{obj.content}
@@ -25,6 +25,7 @@
 				<div style="height:24px" />
 			{/if}
 		{/each}
+		<div style="height:96px" />
 	</main>
 </div>
 
@@ -57,7 +58,7 @@
 	p {
 		font-family: 'Fira Code';
 		font-style: normal;
-		font-weight: 450;
+		font-weight: 400;
 		font-size: 13px;
 		line-height: 24px;
 		/* or 185% */
