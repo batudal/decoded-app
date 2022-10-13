@@ -14,6 +14,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		for (let i = 0; i < 24; i++) {
 			//@ts-ignore
 			// console.log('Type -->', response.results[i].type);
+			//@ts-ignore
 			if (response.results[i].type == 'paragraph') {
 				objects.push({
 					type: 'p',
@@ -49,6 +50,19 @@ export const load: PageServerLoad = async ({ params }) => {
 					type: 'to_do',
 					//@ts-ignore
 					content: response.results[i].to_do.rich_text[0].plain_text
+				});
+				//@ts-ignore
+			} else if (response.results[i].type == 'callout' && response.results[i].callout.rich_text[1]) {
+				//@ts-ignore
+				// console.log(response.results[i].callout);
+				objects.push({
+					type: 'callout',
+					//@ts-ignore
+					content: response.results[i].callout.rich_text[0].plain_text,
+					//@ts-ignore
+					linkText: response.results[i].callout.rich_text[1].plain_text,
+					//@ts-ignore
+					url:response.results[i].callout.rich_text[1].href
 				});
 			}
 		}

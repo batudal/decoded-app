@@ -2,7 +2,7 @@
 	import GradientCard from '../components/GradientCard.svelte';
 </script>
 
-<h4>WE’LL COVER YOUR STRATEGIC NEEDS</h4>
+<h4 class="gradient-text">WE’LL COVER YOUR STRATEGIC NEEDS</h4>
 <main>
 	<GradientCard
 		layout="single"

@@ -15,6 +15,12 @@
 			{:else if obj.type == 'to_do'}
 				<p class="info">{obj.content}</p>
 				<div style="height:48px" />
+			{:else if obj.type == 'callout'}
+			<div class="callout-container">
+				<span class="callout-text">{obj.content}</span> 
+				<a href="{obj.url}" class="callout-link callout-text">{obj.linkText}</a>
+			</div>
+			<div style="height:40px" />
 			{:else}
 				{#if obj.type == 'h2'}
 					<div style="height:48px" />
@@ -64,5 +70,35 @@
 		/* or 185% */
 
 		color: rgba(255, 255, 255, 0.8);
+	}
+	.callout-text {
+		font-family: 'Jost';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		/* identical to box height, or 125% */
+		letter-spacing: -0.05em;
+		color: #FFFFFF;
+	}
+
+	h4 {
+		color: #44F1A6;
+	}
+
+	.callout-link {
+		color: #44F1A6;
+		text-decoration: underline;
+	}
+
+	.callout-container {
+		display: flex;
+		justify-content: center;
+		gap:10px;
+		padding: 12px;
+		background: #151515;
+		backdrop-filter: blur(2.5px);
+		border-radius: 8px;
+		width: 100%;
 	}
 </style>
