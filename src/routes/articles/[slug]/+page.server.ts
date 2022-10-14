@@ -11,7 +11,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		let objects: any[] = [];
 		let title = '';
 		let category = '';
-		for (let i = 0; i < 24; i++) {
+		for (let i = 0; i < response.results.length; i++) {
 			//@ts-ignore
 			// console.log('Type -->', response.results[i].type);
 			//@ts-ignore
@@ -63,6 +63,15 @@ export const load: PageServerLoad = async ({ params }) => {
 					linkText: response.results[i].callout.rich_text[1].plain_text,
 					//@ts-ignore
 					url:response.results[i].callout.rich_text[1].href
+				});
+				//@ts-ignore
+			} else if (response.results[i].type == 'code') {
+				//@ts-ignore
+				console.log(response.results[i].code);
+				objects.push({
+					type: 'code',
+					//@ts-ignore
+					content: response.results[i].code.rich_text[0].plain_text,
 				});
 			}
 		}

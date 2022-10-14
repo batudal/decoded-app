@@ -1,3 +1,9 @@
+<svelte:head>
+	<link href="\src\lib\themes\prism.css" rel="stylesheet" />
+	<script src="\src\lib\themes\prism.js"></script>
+
+</svelte:head>
+
 <script lang="ts">
 	import '../../../global.css';
 	export let data: any;
@@ -20,6 +26,13 @@
 				<span class="callout-text">{obj.content}</span> 
 				<a href="{obj.url}" class="callout-link callout-text">{obj.linkText}</a>
 			</div>
+			<div style="height:40px" />
+			{:else if obj.type == 'code'}
+				<pre class="code">
+					<code class="language-solidity">
+						{obj.content}
+					</code>
+				</pre>
 			<div style="height:40px" />
 			{:else}
 				{#if obj.type == 'h2'}
@@ -101,4 +114,7 @@
 		border-radius: 8px;
 		width: 100%;
 	}
+	/* .code {
+		color:#FFFFFF;
+	} */
 </style>
