@@ -5,7 +5,7 @@
 
 <script lang="ts">
 	import '../../../global.css';
-	// import Prism from 'prismjs';
+	import Prism from 'prismjs';
 	export let data: any;
 </script>
 
