@@ -1,9 +1,10 @@
-<svelte:head>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-funky.min.css" rel="stylesheet" />
-</svelte:head>
+<!-- <svelte:head>
+  <link href="../../../prism-theme.css" rel="stylesheet" />
+</svelte:head> -->
 
 <script lang="ts">
 	import '../../../global.css';
+	import "../../../prism-theme.css"
 	import Prism from 'prismjs';
 	export let data: any;
 
@@ -110,9 +111,6 @@
 		backdrop-filter: blur(2.5px);
 		border-radius: 8px;
 		width: 100%;
-	}
-	pre {
-		max-width: 720px;
 	}
 	.language-solidity {
 		font-size: 13px;
