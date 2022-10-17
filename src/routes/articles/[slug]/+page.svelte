@@ -1,6 +1,6 @@
 <svelte:head>
-	<link href="\src\lib\themes\prism.css" rel="stylesheet" />
-	<script src="\src\lib\themes\prism.js"></script>
+	<link href="\src\styles\prism.css" rel="stylesheet" />
+	<script src="\src\styles\prism.js"></script>
 </svelte:head>
 
 <script lang="ts">
