@@ -1,11 +1,11 @@
 <svelte:head>
 	<link href="\src\lib\themes\prism.css" rel="stylesheet" />
 	<script src="\src\lib\themes\prism.js"></script>
-
 </svelte:head>
 
 <script lang="ts">
 	import '../../../global.css';
+	// import Prism from 'prismjs';
 	export let data: any;
 </script>
 

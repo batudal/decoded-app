@@ -67,7 +67,7 @@ export const load: PageServerLoad = async ({ params }) => {
 				//@ts-ignore
 			} else if (response.results[i].type == 'code') {
 				//@ts-ignore
-				console.log(response.results[i].code);
+				// console.log(response.results[i].code);
 				objects.push({
 					type: 'code',
 					//@ts-ignore
