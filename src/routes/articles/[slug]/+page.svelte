@@ -1,5 +1,5 @@
 <svelte:head>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-funky.min.css" rel="stylesheet" />
 </svelte:head>
 
 <script lang="ts">
@@ -7,7 +7,6 @@
 	import Prism from 'prismjs';
 	export let data: any;
 
-	
 </script>
 
 <div class="container">
@@ -50,7 +49,6 @@
 <style>
 	.container {
 		width: 800px;
-
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -113,7 +111,10 @@
 		border-radius: 8px;
 		width: 100%;
 	}
-	/* .code {
-		color:#FFFFFF;
-	} */
+	pre {
+		max-width: 720px;
+	}
+	.language-solidity {
+		font-size: 13px;
+	}
 </style>
