@@ -1,3 +1,7 @@
+<svelte:head>
+	<link href="src\styles\prism.css" rel="stylesheet" />
+	<script src="src\styles\prism.js"></script>
+</svelte:head>
 <script lang="ts">
 	import '../global.css';
 	import Banner from '../sections/Hero.svelte';

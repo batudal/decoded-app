@@ -1,11 +1,13 @@
 <svelte:head>
-	<link href="..\..\styles\prism.css" rel="stylesheet" />
-	<script src="..\..\styles\prism.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </svelte:head>
 
 <script lang="ts">
 	import '../../../global.css';
+	import Prism from 'prismjs';
 	export let data: any;
+
+	
 </script>
 
 <div class="container">
@@ -27,11 +29,9 @@
 			</div>
 			<div style="height:40px" />
 			{:else if obj.type == 'code'}
-				<pre class="code">
-					<code class="language-solidity">
-						{obj.content}
-					</code>
-				</pre>
+			<pre class="language-solidity">
+					{@html Prism.highlight(obj.content, Prism.languages.javascript, 'solidity')}
+			</pre>
 			<div style="height:40px" />
 			{:else}
 				{#if obj.type == 'h2'}
