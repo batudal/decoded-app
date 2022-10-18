@@ -108,5 +108,6 @@
 	 
 	pre {
 		margin: 0 0 40px;
+		width: 800px;
 	}
 </style>
