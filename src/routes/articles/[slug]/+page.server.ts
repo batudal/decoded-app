@@ -15,7 +15,8 @@ export const load: PageServerLoad = async ({ params }) => {
 			//@ts-ignore
 			// console.log('Type -->', response.results[i].type);
 			//@ts-ignore
-			if (response.results[i].type == 'paragraph') {
+			if (response.results[i].type == 'paragraph' && response.results[i].paragraph.rich_text[0]
+			) {
 				objects.push({
 					type: 'p',
 					//@ts-ignore
