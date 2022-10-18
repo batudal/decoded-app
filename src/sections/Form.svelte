@@ -27,7 +27,7 @@
 	const handleFOI = (event: any) => (foi = event.detail.text);
 </script>
 
-<main>
+<main id="contact">
 	<div style="height:120px;" />
 	<h1>Let's talk business.</h1>
 	<div style="height:36px;" />
