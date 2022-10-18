@@ -1,7 +1,3 @@
-<!-- <svelte:head>
-  <link href="../../../prism-theme.css" rel="stylesheet" />
-</svelte:head> -->
-
 <script lang="ts">
 	import '../../../global.css';
 	import "../../../prism-theme.css"
@@ -18,29 +14,21 @@
 		{#each data.objects as obj}
 			{#if obj.type == 'img'}
 				<img src={obj.content} alt="" />
-				<div style="height:36px" />
 			{:else if obj.type == 'to_do'}
 				<p class="info">{obj.content}</p>
-				<div style="height:48px" />
 			{:else if obj.type == 'callout'}
 			<div class="callout-container">
 				<span class="callout-text">{obj.content}</span> 
 				<a href="{obj.url}" class="callout-link callout-text">{obj.linkText}</a>
 			</div>
-			<div style="height:40px" />
 			{:else if obj.type == 'code'}
 			<pre class="language-solidity">
 					{@html Prism.highlight(obj.content, Prism.languages.javascript, 'solidity')}
 			</pre>
-			<div style="height:40px" />
 			{:else}
-				{#if obj.type == 'h2'}
-					<div style="height:48px" />
-				{/if}
 				<svelte:element this={obj.type}>
 					{obj.content}
 				</svelte:element>
-				<div style="height:24px" />
 			{/if}
 		{/each}
 		<div style="height:96px" />
@@ -49,19 +37,21 @@
 
 <style>
 	.container {
-		width: 800px;
+		max-width: 800px;
+		padding: 0 80px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 	}
 	main {
-		width: 720px;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 	}
 	img {
 		width: 100%;
+		margin: 0 0 36px;
 	}
 	.info {
 		font-family: 'Fira Code';
@@ -71,6 +61,7 @@
 		line-height: 20px;
 		letter-spacing: -0.05em;
 		color: rgb(255, 255, 255, 0.4);
+		margin: 0 0 48px;
 	}
 	p {
 		font-family: 'Fira Code';
@@ -111,8 +102,10 @@
 		backdrop-filter: blur(2.5px);
 		border-radius: 8px;
 		width: 100%;
+		margin: 16px 0 40px;
 	}
-	.language-solidity {
-		font-size: 13px;
+	 
+	pre {
+		margin: 0 0 40px;
 	}
 </style>
