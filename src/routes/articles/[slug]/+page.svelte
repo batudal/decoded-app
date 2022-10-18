@@ -103,6 +103,7 @@
 		border-radius: 8px;
 		width: 100%;
 		margin: 16px 0 40px;
+		box-sizing: border-box;
 	}
 	 
 	pre {
