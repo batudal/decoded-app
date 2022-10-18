@@ -14,8 +14,8 @@
 
 <style>
 	main {
-		width: 800px;
-		height: 400px;
+		width: 80%;
+		max-width: 800px;
 		padding: 106px 0px;
 		display: flex;
 		flex-direction: row;

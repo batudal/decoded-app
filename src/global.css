@@ -109,7 +109,7 @@ h4 {
 	-webkit-background-clip: text;
 	/* Make the text fill color value transparent so the masked background color comes through */
 	-webkit-text-fill-color: transparent;
-	margin: 0px;
+	margin: 0 0 32px;
 }
 
 .button {
@@ -173,7 +173,6 @@ h4 {
 		font-size: 48px;
 		line-height: 60px;
 		letter-spacing: -0.05em;
-
 	}
 }
 @media (max-width:567px) {

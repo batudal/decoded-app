@@ -28,7 +28,8 @@
 		);
 	}
 	nav {
-		width: 800px;
+		width: 80%;
+		max-width: 800px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -53,5 +54,9 @@
 	.menu > a:hover {
 		font-weight: 500;
 		color: rgba(68, 241, 166, 1);
+	}
+	@media (max-width:767px) {
+	}
+	@media (max-width:567px) {
 	}
 </style>

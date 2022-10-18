@@ -1,6 +1,10 @@
 <script lang="ts">
 	import GradientCard from '../components/GradientCard.svelte';
+	
+	let innerWidth = 0;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <h4 id="services">WE’LL COVER YOUR STRATEGIC NEEDS</h4>
 <main>
@@ -11,13 +15,13 @@
 		image="/svg/service-1.svg"
 	/>
 	<GradientCard
-		layout="double"
+		layout= {innerWidth > 1000 ? "double" : "single"}
 		title="Token Engineering"
 		desc="Get competitive advantage in  the fast paced market by incorporating leading practices in your token economy."
 		image="/svg/service-2.svg"
 	/>
 	<GradientCard
-		layout="double"
+		layout={innerWidth > 1000 ? "double" : "single"}
 		title="Strategy Design"
 		desc="Make long lasting and intelligent choices when building your strategy with the technology guidance from experienced crypto-native network."
 		image="/svg/service-3.svg"
@@ -26,7 +30,8 @@
 
 <style>
 	main {
-		width: 800px;
+		width: 80%;
+		max-width: 800px;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
