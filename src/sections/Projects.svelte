@@ -30,7 +30,7 @@
 </script>
 
 <div style="height:28px" />
-<h4 class="gradient-text">PROJECTS WE’RE COOKING</h4>
+<h4 id="projects">PROJECTS WE’RE COOKING</h4>
 <div style="height:16px" />
 <main>
 	{#each projects as prj}
