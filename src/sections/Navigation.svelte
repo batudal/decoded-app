@@ -28,7 +28,8 @@
 		);
 	}
 	nav {
-		width: 800px;
+		width: 80%;
+		max-width: 800px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;

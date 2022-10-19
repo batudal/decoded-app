@@ -2,7 +2,7 @@
 	import GradientCard from '../components/GradientCard.svelte';
 </script>
 
-<h4>NEVERMIND THE OBSTACLES</h4>
+<h4 class="gradient-text">NEVERMIND THE OBSTACLES</h4>
 <main>
 	<GradientCard
 		layout="single"
