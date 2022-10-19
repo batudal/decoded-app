@@ -6,6 +6,12 @@
 
 </script>
 
+<svelte:head>
+	<title>
+		{data.title}
+	</title>
+</svelte:head>
+
 <div class="container">
 	<main>
 		<div style="height:160px" />
