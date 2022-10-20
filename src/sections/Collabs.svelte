@@ -29,7 +29,7 @@
 	];
 </script>
 
-<h4>COLLABORATIONS</h4>
+<h4 class="gradient-text">COLLABORATIONS</h4>
 <div style="height:16px" />
 <main>
 	{#each collabs as prj}

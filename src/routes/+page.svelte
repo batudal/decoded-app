@@ -11,6 +11,10 @@
 	import Technologies from '../sections/Technologies.svelte';
 </script>
 
+<svelte:head>
+	<title> Decoded Labs</title>
+</svelte:head>
+
 <div style="height:240px" />
 <Banner />
 <div style="height:160px" />
