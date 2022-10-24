@@ -7,9 +7,7 @@
 
 <a href={url}>
 	<h3>{title}</h3>
-	<div style="height:4px" />
 	<p>{type}</p>
-	<div style="height:18px" />
 	<img src={image} alt={title} />
 </a>
 
@@ -35,7 +33,7 @@
 		line-height: 24px;
 		letter-spacing: -0.05em;
 		color: #ffffff;
-		margin: 0;
+		margin-bottom: 4px;
 	}
 	p {
 		font-family: 'Jost';
@@ -44,6 +42,27 @@
 		font-size: 14px;
 		line-height: 20px;
 		color: rgba(255, 255, 255, 0.6);
-		margin: 0;
+		margin-bottom: 18px;
+	}
+
+	@media (max-width:867px) {
+		a {
+		width: 400px;
+		height: 400px;
+		padding: 40px 48px;
+		}
+		img {
+		width: 336px;
+		}
+	}
+	@media (max-width:567px) {
+		a {
+		width: 320px;
+		height: 320px;
+		padding: 24px 32px;
+		}
+		img {
+		width: 260px;
+		}
 	}
 </style>

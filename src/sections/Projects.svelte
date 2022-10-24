@@ -40,12 +40,15 @@
 
 <style>
 	main {
-		width: 80%;
-		max-width: 800px;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: auto auto;
 		gap: 32px;
+	}
+
+	@media (max-width:867px) {
+		main {
+			grid-template-columns: auto ;
+		}
 	}
 	
 </style>

@@ -14,6 +14,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 100vw;
+		width: 100%;
 	}
 </style>
