@@ -4,7 +4,10 @@
 		<div class="line">
 			<h1 class="font-white t-large z-bottom font-semi-bold">Join the radical</h1>
 		</div>
-		<img src="/svg/pill.svg" alt="a holographic pill" />
+		<img
+			src="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/pill.webp"
+			alt="a holographic pill"
+		/>
 		<div class="line"><h1 class="font-white t-large z-top">revolution today.</h1></div>
 	</div>
 	<span
@@ -48,8 +51,9 @@
 	}
 	img {
 		position: absolute;
-		z-index: 2;
-		bottom: 30%;
+		z-index: 1;
+		margin-top: 50px;
+		width: 180px;
 	}
 	@media (max-width: 767px) {
 		img {

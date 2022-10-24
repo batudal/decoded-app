@@ -5,25 +5,29 @@
 		{
 			title: 'Nether Protocol',
 			type: 'Ether Treasury',
-			image: '/images/prj-1.png',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/project-1.webp',
 			url: 'https://nether.finance'
 		},
 		{
 			title: 'Deadly Games',
 			type: 'Decentralized Playground',
-			image: '/images/prj-2.png',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/project-2.webp',
 			url: 'https://deadly.games'
 		},
 		{
 			title: 'Micro Colonies',
 			type: 'NFT Collection / Idle Game',
-			image: '/images/prj-3.png',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/project-3.webp',
 			url: 'https://microcolonies.com'
 		},
 		{
 			title: 'Fungible Future',
 			type: 'NFT Derivaties',
-			image: '/images/prj-4.png',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/project-4.webp',
 			url: 'https://fungiblefuture.com'
 		}
 	];

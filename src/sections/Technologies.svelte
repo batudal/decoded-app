@@ -1,5 +1,8 @@
 <main>
-	<img src="/images/rocket.png" alt="rocket" />
+	<img
+		src="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/rocket.webp"
+		alt="rocket"
+	/>
 	<div style="width:64px" />
 	<div class="content">
 		<h2>Technologies we love and use</h2>
