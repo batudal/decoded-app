@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../global.css';
-	import Banner from '../sections/Hero.svelte';
+	import Hero from '../sections/Hero.svelte';
 	import Projects from '../sections/Projects.svelte';
 	import Form from '../sections/Form.svelte';
 	import BuildingOn from '../sections/BuildingOn.svelte';
@@ -12,11 +12,16 @@
 </script>
 
 <svelte:head>
-	<title> Decoded Labs</title>
+	<meta
+		name="description"
+		content="Decoded Labs provides many public tools and premium services such as; decentralized app, smart contract and private blockchain network development."
+	/>
+	<title>Decoded Labs: A developer collective focused on blockchain applications</title>
+	<link rel="canonical" href="https://decoded-labs.com/" />
 </svelte:head>
 
 <div style="height:240px" />
-<Banner />
+<Hero />
 <div style="height:160px" />
 <Projects />
 <div style="height:40px" />

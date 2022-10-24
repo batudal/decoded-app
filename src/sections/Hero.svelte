@@ -1,8 +1,11 @@
 <div class="container">
 	<div class="hero">
-		<div class="line"> <h1 class="font-white t-large z-bottom font-semi-bold">Join the radical </h1></div>
-        <img src="/svg/pill.svg" alt="a holographic pill">
-        <div class="line"><h1 class="font-white t-large z-top">revolution today. </h1></div>
+		<!-- !! WE NEED TO MERGE H1's INTO ONE FOR SEO-->
+		<div class="line">
+			<h1 class="font-white t-large z-bottom font-semi-bold">Join the radical</h1>
+		</div>
+		<img src="/svg/pill.svg" alt="a holographic pill" />
+		<div class="line"><h1 class="font-white t-large z-top">revolution today.</h1></div>
 	</div>
 	<span
 		>Decoded Labs is a developer collective committed to safeguard your ventures into the ambigous
@@ -38,31 +41,30 @@
 
 		color: rgba(255, 255, 255, 0.8);
 	}
-	h1{
+	h1 {
 		position: relative;
 		z-index: 1;
-		transition: .3s ease;
+		transition: 0.3s ease;
 	}
-	img{
+	img {
 		position: absolute;
 		z-index: 2;
-		bottom: 30%; 
-
+		bottom: 30%;
 	}
-	@media (max-width:767px) {
-			img{
-				width: 140px;
-				bottom: 37%;
-			}
+	@media (max-width: 767px) {
+		img {
+			width: 140px;
+			bottom: 37%;
 		}
-		
-		@media (max-width:567px) {
-			img{
-				width: 100px;
-				bottom: 44%;
-			}
+	}
+
+	@media (max-width: 567px) {
+		img {
+			width: 100px;
+			bottom: 44%;
 		}
-	.z-top{
+	}
+	.z-top {
 		z-index: 3;
 	}
 </style>
