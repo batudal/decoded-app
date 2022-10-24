@@ -6,7 +6,7 @@
 
 <svelte:window bind:innerWidth />
 
-<h4 id="services">WE’LL COVER YOUR STRATEGIC NEEDS</h4>
+<h4 id="services" class="gradient-text">WE’LL COVER YOUR STRATEGIC NEEDS</h4>
 <main>
 	<GradientCard
 		layout="single"

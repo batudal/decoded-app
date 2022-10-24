@@ -5,7 +5,7 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<h4>NEVERMIND THE OBSTACLES</h4>
+<h4 class="gradient-text">NEVERMIND THE OBSTACLES</h4>
 <main>
 	<GradientCard
 		layout="single"
@@ -29,7 +29,8 @@
 
 <style>
 	main {
-		width: 800px;
+		width: 80%;
+		max-width: 800px;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;

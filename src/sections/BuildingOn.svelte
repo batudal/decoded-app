@@ -31,7 +31,8 @@
 		color: rgba(255, 255, 255, 0.8);
 	}
 	main {
-		width: 800px;
+		width: 80%;
+		max-width: 800px;
 		height: 60px;
 		display: flex;
 		flex-direction: row;
