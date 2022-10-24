@@ -1,9 +1,9 @@
 <script lang="ts">
 	import '../../../global.css';
-	import "../../../prism-theme.css"
+	import '../../../prism-theme.css';
 	import Prism from 'prismjs';
+	import RelatedCards from '../../../components/RelatedCards.svelte';
 	export let data: any;
-
 </script>
 
 <svelte:head>
@@ -23,12 +23,12 @@
 			{:else if obj.type == 'to_do'}
 				<p class="info">{obj.content}</p>
 			{:else if obj.type == 'callout'}
-			<div class="callout-container">
-				<span class="callout-text">{obj.content}</span> 
-				<a href="{obj.url}" class="callout-link callout-text">{obj.linkText}</a>
-			</div>
+				<div class="callout-container">
+					<span class="callout-text">{obj.content}</span>
+					<a href={obj.url} class="callout-link callout-text">{obj.linkText}</a>
+				</div>
 			{:else if obj.type == 'code'}
-			<pre class="language-solidity">
+				<pre class="language-solidity">
 					{@html Prism.highlight(obj.content, Prism.languages.javascript, 'solidity')}
 			</pre>
 			{:else}
@@ -37,6 +37,8 @@
 				</svelte:element>
 			{/if}
 		{/each}
+		<div style="height:72px" />
+		<RelatedCards posts={data.related_posts} />
 		<div style="height:96px" />
 	</main>
 </div>
@@ -87,22 +89,22 @@
 		line-height: 20px;
 		/* identical to box height, or 125% */
 		letter-spacing: -0.05em;
-		color: #FFFFFF;
+		color: #ffffff;
 	}
 
 	h4 {
-		color: #44F1A6;
+		color: #44f1a6;
 	}
 
 	.callout-link {
-		color: #44F1A6;
+		color: #44f1a6;
 		text-decoration: underline;
 	}
 
 	.callout-container {
 		display: flex;
 		justify-content: center;
-		gap:10px;
+		gap: 10px;
 		padding: 12px;
 		background: #151515;
 		backdrop-filter: blur(2.5px);
@@ -111,7 +113,7 @@
 		margin: 16px 0 40px;
 		box-sizing: border-box;
 	}
-	 
+
 	pre {
 		margin: 0 0 40px;
 		width: 800px;
