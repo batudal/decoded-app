@@ -9,7 +9,6 @@
 	<img src={image} alt="" />
 	<div class="content">
 		<h2>{title}</h2>
-		<div style="height:12px;" />
 		<p>{desc}</p>
 	</div>
 </main>
@@ -33,6 +32,9 @@
 	.double > .content {
 		margin-left: 117px;
 	}
+	h2 {
+		margin-bottom: 12px;
+	}
 	img {
 		position: absolute;
 	}
@@ -43,5 +45,20 @@
 		max-width: 440px;
 		align-items: flex-start;
 		justify-content: center;
+	}
+	p {
+		margin: 0;
+	}
+
+	@media (max-width:567px) {
+		h2 {
+			font-size: 20px;
+			line-height: 20px;
+		}
+		p
+		{
+			font-size: 12px;
+			line-height: 18px;
+		}
 	}
 </style>
