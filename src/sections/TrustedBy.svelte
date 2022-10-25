@@ -45,4 +45,14 @@
 	img {
 		height: 32px;
 	}
+	@media (max-width:867px) {
+		main {
+			flex-direction: column;
+		}
+	}
+	@media (max-width:567px) {
+		.images {
+			flex-wrap: wrap;
+		}
+	}
 </style>
