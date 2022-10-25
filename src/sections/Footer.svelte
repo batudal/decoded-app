@@ -1,6 +1,9 @@
 <footer>
 	<main>
-		<img src="/svg/logo.svg" alt="logo" />
+		<img
+			src="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/logo.webp"
+			alt="logo"
+		/>
 		<div class="socials">
 			<a href="https://github.com/decoded-labs">
 				<img src="/svg/icons/github.svg" alt="" />
@@ -19,6 +22,9 @@
 </footer>
 
 <style>
+	main > img {
+		height: 24px;
+	}
 	footer {
 		display: flex;
 		flex-direction: column;
