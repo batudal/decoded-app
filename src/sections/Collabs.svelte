@@ -24,11 +24,11 @@
 			url: 'https://hogs.gg'
 		},
 		{
-			title: 'Dahl Gallery',
-			type: 'Auction House',
+			title: 'dEVM',
+			type: 'Private Testnet',
 			image:
 				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/collab-4.webp',
-			url: 'https://dahl.gallery'
+			url: 'https://devmscan.com'
 		}
 	];
 </script>
