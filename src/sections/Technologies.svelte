@@ -9,7 +9,12 @@
 		<div style="height:32px" />
 		<div class="items">
 			{#each Array(18) as _, i}
-				<img src={`svg/tech-${i + 1}.svg`} alt="" />
+				<img
+					src={`https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/tech-${
+						i + 1
+					}.webp`}
+					alt=""
+				/>
 			{/each}
 		</div>
 	</div>
@@ -26,6 +31,9 @@
 	}
 	main > img {
 		height: 191px;
+	}
+	.items > img {
+		height: 60px;
 	}
 	.content {
 		width: 540px;

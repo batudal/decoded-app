@@ -1,19 +1,14 @@
-<script>
-	let builders = [
-		'/svg/brand-1.svg',
-		'/svg/brand-2.svg',
-		'/svg/brand-3.svg',
-		'/svg/brand-4.svg',
-		'/svg/brand-5.svg'
-	];
-</script>
-
 <div style="height:40px" />
 <main>
 	<p>Trusted by buidlers</p>
 	<div class="images">
-		{#each builders as builder}
-			<img src={builder} alt="" />
+		{#each Array(5) as _, i}
+			<img
+				src={`https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/brand-${
+					i + 1
+				}.webp`}
+				alt=""
+			/>
 		{/each}
 	</div>
 </main>
@@ -27,6 +22,7 @@
 		line-height: 20px;
 		letter-spacing: -0.05em;
 		color: rgba(255, 255, 255, 0.8);
+		margin: 0px;
 	}
 	main {
 		width: 800px;
@@ -42,6 +38,6 @@
 		gap: 24px;
 	}
 	img {
-		height: 32px;
+		height: 48px;
 	}
 </style>

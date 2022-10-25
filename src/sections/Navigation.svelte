@@ -1,6 +1,9 @@
 <div class="container">
 	<nav>
-		<img src="/svg/logo.svg" alt="logo" />
+		<img
+			src="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/logo.webp"
+			alt="logo"
+		/>
 		<div class="menu">
 			<a title="Projects" class="active" href="#projects">Projects</a>
 			<a title="Atelier" class="active" href="#projects">Atelier</a>
@@ -12,6 +15,9 @@
 </div>
 
 <style>
+	img {
+		height: 24px;
+	}
 	.container {
 		position: fixed;
 		z-index: 100;
