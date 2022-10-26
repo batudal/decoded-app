@@ -66,20 +66,18 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<div style="height:28px" />
 <h4 id="projects" class="gradient-text">PROJECTS WE’RE CURRENTLY WORKING ON</h4>
-<div style="height:16px" />
 <div class="project">
-	{#if innerWidth > 480}
+	{#if innerWidth >= 481}
 		{#each projectsMobile as prj}
 			<SingleCard title={prj.title} type={prj.type} image={prj.image} url={prj.url} />
 		{/each}
 		{#each projects as prj}
-		<SingleCard title={prj.title} type={prj.type} image={prj.image} url={prj.url} />
+			<SingleCard title={prj.title} type={prj.type} image={prj.image} url={prj.url} />
 		{/each}
 	{:else}
 		{#each projectsMobile as prj}
-		<SingleCard title={prj.title} type={prj.type} image={prj.image} url={prj.url} />
+			<SingleCard title={prj.title} type={prj.type} image={prj.image} url={prj.url} />
 		{/each}
 	{/if}
 </div>
@@ -90,10 +88,16 @@
 		grid-template-columns: auto auto;
 		gap: 32px;
 	}
+	h4 {
+		margin-bottom: 36px;
+	}
 
 	@media (max-width:867px) {
 		.project {
 			grid-template-columns: auto ;
+		}
+		h4 {
+			margin-bottom: 24px;
 		}
 	}
 	@media (max-width:567px) {

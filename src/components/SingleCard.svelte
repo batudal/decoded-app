@@ -18,7 +18,7 @@
 		background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 100%);
 		backdrop-filter: blur(2px);
 		border-radius: 12px;
-		padding: 32px 40px;
+		padding: 40px 32px;
 		box-sizing: border-box;
 		cursor: pointer;
 	}
@@ -47,22 +47,29 @@
 
 	@media (max-width:867px) {
 		a {
-		width: 400px;
-		height: 400px;
-		padding: 40px 48px;
+			width: 400px;
+			height: 400px;
+			padding: 40px 40px;
 		}
 		img {
-		width: 336px;
+			width: 336px;
+		}
+		h3,
+		p {
+			text-align: center;
+		}
+		p {
+			margin-bottom: 16px;
 		}
 	}
 	@media (max-width:567px) {
 		a {
-		width: 320px;
-		height: 320px;
-		padding: 24px 32px;
+			width: 320px;
+			height: 320px;
+			padding: 20px 12px 16px;
 		}
 		img {
-		width: 260px;
+			width: 260px;
 		}
 	}
 </style>
