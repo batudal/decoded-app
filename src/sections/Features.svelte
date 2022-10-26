@@ -2,18 +2,15 @@
 	import GradientCard from '../components/GradientCard.svelte';
 
 	let innerWidth = 0;
-	const desktopDesc = "Bring your business model to life entrusting us with the technical aspects.We provide cutting edge user experience to your clients both on and off the chain with our vast experience, understanding of user pain points  and market know-how. "
-	const mobileDesc = "We provide cutting edge user experience to your clients both on and off the chain with our vast experience, understanding of user pain points  and market know-how. "
 </script>
 
 <svelte:window bind:innerWidth />
 <h4 class="gradient-text">NEVERMIND THE OBSTACLES</h4>
-<div style="height:16px;" />
 <main>
 	<GradientCard
 		layout="single"
 		title="Specialized Partner Network"
-		desc={innerWidth > 767 ? desktopDesc : mobileDesc}
+		desc="Bring your business model to life entrusting us with the technical aspects.We provide cutting edge user experience to your clients both on and off the chain with our vast experience, understanding of user pain points  and market know-how. "
 		image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/obs-1.webp"
 	/>
 	<GradientCard

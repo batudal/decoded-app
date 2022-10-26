@@ -27,7 +27,7 @@
 	const handleFOI = (event: any) => (foi = event.detail.text);
 </script>
 
-<main id="contact">
+<div id="contact" class="contacts">
 	<div style="height:120px;" />
 	<h1>Let's talk business.</h1>
 	<div style="height:36px;" />
@@ -40,10 +40,10 @@
 		</div>
 	</div>
 	<div style="height:120px;" />
-</main>
+</div>
 
 <style>
-	main {
+	.contacts {
 		width: 100%;
 		background: rgba(0, 0, 0, 0.8);
 		backdrop-filter: blur(2px);
@@ -59,12 +59,13 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 12px;
+		gap: 10px;
+		max-width: 664px;
 	}
 	input,
 	textarea {
 		box-sizing: border-box;
-		width: 600px;
+		width: 100%;
 		background: rgba(0, 0, 0, 0.3);
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		border-radius: 8px;
@@ -84,5 +85,12 @@
 	}
 	.button {
 		width: 600px;
+	}
+
+	@media (max-width:867px) {
+
+	}
+	@media (max-width:567px) {
+
 	}
 </style>

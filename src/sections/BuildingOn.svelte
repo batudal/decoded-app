@@ -17,7 +17,7 @@
 		font-family: 'Jost';
 		font-style: normal;
 		font-weight: 500;
-		font-size: 16px;
+		font-size: 20px;
 		line-height: 20px;
 		letter-spacing: -0.05em;
 		color: rgba(255, 255, 255, 0.8);
@@ -43,6 +43,7 @@
 	@media (max-width:867px) {
 		main {
 			flex-direction: column;
+			gap:32px;
 		}
 	}
 	@media (max-width:567px) {
