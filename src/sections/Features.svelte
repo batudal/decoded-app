@@ -8,24 +8,25 @@
 
 <svelte:window bind:innerWidth />
 <h4 class="gradient-text">NEVERMIND THE OBSTACLES</h4>
+<div style="height:16px;" />
 <main>
 	<GradientCard
 		layout="single"
 		title="Specialized Partner Network"
 		desc={innerWidth > 767 ? desktopDesc : mobileDesc}
-		image="/svg/obs-1.svg"
+		image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/obs-1.webp"
 	/>
 	<GradientCard
 		layout={innerWidth > 1000 ? "double" : "single"}
 		title="Longterm Support"
 		desc="Get competitive advantage in  the fast paced market by incorporating leading practices in your token economy."
-		image="/svg/obs-2.svg"
+		image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/obs-2.webp"
 	/>
 	<GradientCard
 		layout={innerWidth > 1000 ? "double" : "single"}
 		title="Quality Assurance"
 		desc="Make long lasting and intelligent choices when building your strategy with the technology guidance from experienced crypto-native network."
-		image="/svg/obs-3.svg"
+		image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/obs-3.webp"
 	/>
 </main>
 

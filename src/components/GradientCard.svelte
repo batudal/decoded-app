@@ -3,10 +3,11 @@
 	export let title: string;
 	export let desc: string;
 	export let layout: string;
+	$: image_margin = layout + '-img';
 </script>
 
 <main class={`${layout}`}>
-	<img src={image} alt="" />
+	<img src={image} alt="" class={image_margin} />
 	<div class="content">
 		<h2>{title}</h2>
 		<p>{desc}</p>
@@ -37,6 +38,13 @@
 	}
 	img {
 		position: absolute;
+		height: 240px;
+	}
+	.single-img {
+		margin-left: -100px;
+	}
+	.double-img {
+		margin-left: -160px;
 	}
 	.content {
 		height: 100%;

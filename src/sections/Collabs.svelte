@@ -5,26 +5,30 @@
 		{
 			title: 'METActivists',
 			type: 'NFT Project',
-			image: '/svg/collab-1.svg',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/collab-1.webp',
 			url: 'https://metactivists.io'
 		},
 		{
 			title: 'Spinstarter',
 			type: 'On-chain Launchpad',
-			image: '/images/collab-2.png',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/collab-2.webp',
 			url: 'https://spinstarter.app'
 		},
 		{
 			title: 'House of Goblins',
 			type: 'NFT / Idle Game',
-			image: '/images/collab-3.png',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/collab-3.webp',
 			url: 'https://hogs.gg'
 		},
 		{
-			title: 'Dahl Gallery',
-			type: 'Auction House',
-			image: '/images/collab-4.png',
-			url: 'https://dahl.gallery'
+			title: 'dEVM',
+			type: 'Private Testnet',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/collab-4.webp',
+			url: 'https://devmscan.com'
 		}
 	];
 </script>

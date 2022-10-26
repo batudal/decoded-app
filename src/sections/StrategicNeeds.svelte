@@ -15,19 +15,19 @@
 		layout="single"
 		title="Decentralized App Development"
 		desc= {innerWidth > 767 ? desktopDesc : mobileDesc}
-		image="/svg/service-1.svg"
+		image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/service-1.webp"
 	/>
 	<GradientCard
 		layout= {innerWidth > 1000 ? "double" : "single"}
 		title="Token Engineering"
 		desc="Get competitive advantage in  the fast paced market by incorporating leading practices in your token economy."
-		image="/svg/service-2.svg"
+		image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/service-2.webp"
 	/>
 	<GradientCard
 		layout={innerWidth > 1000 ? "double" : "single"}
 		title="Strategy Design"
 		desc="Make long lasting and intelligent choices when building your strategy with the technology guidance from experienced crypto-native network."
-		image="/svg/service-3.svg"
+		image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/service-3.webp"
 	/>
 </main>
 

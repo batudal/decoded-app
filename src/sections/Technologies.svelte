@@ -1,10 +1,18 @@
 <main>
-	<img src="/images/rocket.png" alt="rocket" />
+	<img
+		src="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/rocket.webp"
+		alt="rocket"
+	/>
 	<div class="content">
 		<h2>Technologies we love and use</h2>
 		<div class="items">
 			{#each Array(18) as _, i}
-				<img src={`svg/tech-${i + 1}.svg`} alt="" />
+				<img
+					src={`https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/tech-${
+						i + 1
+					}.webp`}
+					alt=""
+				/>
 			{/each}
 		</div>
 	</div>
@@ -22,6 +30,9 @@
 	main > img {
 		height: 191px;
 		margin-right: 64px;
+	}
+	.items > img {
+		height: 60px;
 	}
 	.content {
 		width: 67.5%;
