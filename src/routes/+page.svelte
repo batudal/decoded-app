@@ -4,7 +4,6 @@
 	import Projects from '../sections/Projects.svelte';
 	import Form from '../sections/Form.svelte';
 	import BuildingOn from '../sections/BuildingOn.svelte';
-	import Collabs from '../sections/Collabs.svelte';
 	import TrustedBy from '../sections/TrustedBy.svelte';
 	import StrategicNeeds from '../sections/StrategicNeeds.svelte';
 	import Features from '../sections/Features.svelte';
@@ -27,13 +26,11 @@
 <div style="height:40px" />
 <BuildingOn />
 <div style="height:160px" />
-<Collabs />
-<TrustedBy />
-<div style="height:160px" />
 <StrategicNeeds />
 <div style="height:60px" />
 <Technologies />
 <div style="height:60px" />
 <Features />
+<TrustedBy />
 <div style="height:60px" />
 <Form />

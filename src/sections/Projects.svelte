@@ -29,6 +29,34 @@
 			image:
 				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/project-4.webp',
 			url: 'https://fungiblefuture.com'
+		},
+		{
+		title: 'METActivists',
+			type: 'NFT Project',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/collab-1.webp',
+			url: 'https://metactivists.io'
+		},
+		{
+			title: 'Spinstarter',
+			type: 'On-chain Launchpad',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/collab-2.webp',
+			url: 'https://spinstarter.app'
+		},
+		{
+			title: 'House of Goblins',
+			type: 'NFT / Idle Game',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/collab-3.webp',
+			url: 'https://hogs.gg'
+		},
+		{
+			title: 'dEVM',
+			type: 'Private Testnet',
+			image:
+				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/collab-4.webp',
+			url: 'https://devmscan.com'
 		}
 	];
 </script>
