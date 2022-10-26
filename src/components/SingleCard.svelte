@@ -5,7 +5,7 @@
 	export let url: any;
 </script>
 
-<a href={url}>
+<a href={url} target="_blank" rel="noreferrer">
 	<h3>{title}</h3>
 	<p>{type}</p>
 	<img src={image} alt={title} />

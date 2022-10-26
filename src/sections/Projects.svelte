@@ -1,7 +1,9 @@
 <script lang="ts">
 	import SingleCard from '../components/SingleCard.svelte';
 
-	let projects = [
+	let innerWidth = 0;
+
+	let projectsMobile = [
 		{
 			title: 'Nether Protocol',
 			type: 'Ether Treasury',
@@ -29,8 +31,10 @@
 			image:
 				'https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/project-4.webp',
 			url: 'https://fungiblefuture.com'
-		},
-		{
+		}
+	];
+
+		let projects = [{
 		title: 'METActivists',
 			type: 'NFT Project',
 			image:
@@ -61,25 +65,42 @@
 	];
 </script>
 
+<svelte:window bind:innerWidth />
 <div style="height:28px" />
-<h4 id="projects" class="gradient-text">PROJECTS WE’RE COOKING</h4>
+<h4 id="projects" class="gradient-text">PROJECTS WE’RE CURRENTLY WORKING ON</h4>
 <div style="height:16px" />
-<main>
-	{#each projects as prj}
+<div class="project">
+	{#if innerWidth > 480}
+		{#each projectsMobile as prj}
+			<SingleCard title={prj.title} type={prj.type} image={prj.image} url={prj.url} />
+		{/each}
+		{#each projects as prj}
 		<SingleCard title={prj.title} type={prj.type} image={prj.image} url={prj.url} />
-	{/each}
-</main>
+		{/each}
+	{:else}
+		{#each projectsMobile as prj}
+		<SingleCard title={prj.title} type={prj.type} image={prj.image} url={prj.url} />
+		{/each}
+	{/if}
+</div>
 
 <style>
-	main {
+	.project {
 		display: grid;
 		grid-template-columns: auto auto;
 		gap: 32px;
 	}
 
 	@media (max-width:867px) {
-		main {
+		.project {
 			grid-template-columns: auto ;
+		}
+	}
+	@media (max-width:567px) {
+		h4 {
+			font-size: 12px;
+			line-height: 17px;
+			text-align: center;
 		}
 	}
 	
