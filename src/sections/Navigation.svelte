@@ -11,6 +11,7 @@
 			<a title="Services" href="#services">Services</a>
 			<a title="Contact" href="#contact">Contact</a>
 		</div>
+		<button><i class="fa-sharp fa-solid fa-bars"></i></button>
 	</nav>
 </div>
 
@@ -61,8 +62,25 @@
 		font-weight: 500;
 		color: rgba(68, 241, 166, 1);
 	}
-	@media (max-width:767px) {
+	.fa-bars,
+	button {
+		display: none;
 	}
-	@media (max-width:567px) {
+	@media (max-width:640px) {
+		button {
+			all: unset;
+			cursor: pointer;
+		}
+	
+		button:focus {
+			outline: #fff solid 3px;
+		}
+		.fa-bars {
+			display: block;
+			font-size: 20px;
+		}
+		.menu {
+			display: none;
+		}
 	}
 </style>

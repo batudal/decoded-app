@@ -17,6 +17,7 @@
 	/>
 	<title>Decoded Labs: A developer collective focused on blockchain applications</title>
 	<link rel="canonical" href="https://decoded-labs.com/" />
+	<script src="https://kit.fontawesome.com/db2f0fb407.js" crossorigin="anonymous"></script>
 </svelte:head>
 
 <div style="height:240px" />
