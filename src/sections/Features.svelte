@@ -39,4 +39,12 @@
 		flex-wrap: wrap;
 		gap: 32px;
 	}
+	@media (max-width:567px) {
+		h4 {
+			font-size: 14px;
+			line-height: 20px;
+			text-align: center;
+			max-width: 234px;;
+		}
+	}
 </style>

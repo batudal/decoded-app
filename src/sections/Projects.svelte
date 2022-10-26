@@ -105,6 +105,7 @@
 			font-size: 12px;
 			line-height: 17px;
 			text-align: center;
+			max-width: 234px;;
 		}
 	}
 	
