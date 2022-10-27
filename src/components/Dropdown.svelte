@@ -30,7 +30,7 @@
 	};
 </script>
 
-<div on:click={toggle} on:keydown>
+<div on:click={toggle} on:keydown class="dropdown-container">
 	<div class="label">
 		{chosen}
 		<img class="chevron" src="/svg/right.svg" alt="chevron" />
@@ -47,8 +47,10 @@
 </div>
 
 <style>
+	.dropdown-container {
+		width: 100%;
+	}
 	.label {
-		width: 600px;
 		color: rgba(255, 255, 255, 0.4);
 		height: 60px;
 		background: rgba(0, 0, 0, 0.3);
@@ -91,7 +93,6 @@
 		box-sizing: border-box;
 		transition: 0.1s linear;
 		cursor: pointer;
-		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: space-between;
@@ -112,5 +113,13 @@
 	.item:hover {
 		color: rgba(255, 255, 255, 0.8);
 		background-color: rgba(0, 0, 0, 1);
+	}
+
+	@media (max-width:567px) {
+		.label,
+		.dropdown {
+			font-size: 1rem;
+			line-height: 2rem;
+		}
 	}
 </style>
