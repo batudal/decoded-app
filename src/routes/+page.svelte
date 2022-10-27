@@ -33,5 +33,4 @@
 <div style="height:60px" />
 <Features />
 <TrustedBy />
-<div style="height:60px" />
 <Form />
