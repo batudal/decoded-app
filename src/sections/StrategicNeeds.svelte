@@ -16,14 +16,14 @@
 	/>
 	<GradientCard
 		layout= {innerWidth > 1017 ? "double" : "single"}
-		title="Token Engineering"
+		title="Security Audits"
 		desc="Get competitive advantage in  the fast paced market by incorporating leading practices in your token economy."
 		image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/service-2.webp"
 	/>
 	<GradientCard
 		layout={innerWidth > 1017 ? "double" : "single"}
-		title="Strategy Design"
-		desc="Make long lasting and intelligent choices when building your strategy with the technology guidance from experienced crypto-native network."
+		title="Private Network"
+		desc="Deploy your own app-chain or multi-party consensus system with features like chain explorer, bridge, oracles and more."
 		image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/service-3.webp"
 	/>
 </main>
