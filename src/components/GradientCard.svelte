@@ -7,11 +7,13 @@
 </script>
 
 <main class={`${layout}`}>
-	<img src={image} alt="" class={image_margin} />
-	<div class="content">
-		<h2>{title}</h2>
-		<p>{desc}</p>
-	</div>
+		<div class="img-container">
+			<img src={image} alt="" class={image_margin} />
+		</div>
+		<div class="content">
+			<h2>{title}</h2>
+			<p>{desc}</p>
+		</div>
 </main>
 
 <style>
@@ -33,6 +35,7 @@
 	.double > .content {
 		margin-left: 117px;
 	}
+
 	h2 {
 		margin-bottom: 12px;
 	}
@@ -59,14 +62,43 @@
 	}
 
 	@media (max-width:567px) {
+		main {
+			/* height: 466px; */
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			background: none;
+			align-items:center;
+			justify-content: center;
+			gap:24px;
+		}
+		.img-container {
+			height: 200px;
+			width: 300px;
+			background: linear-gradient(94.7deg, rgba(255, 255, 255, 0.07) 1.77%, rgba(255, 255, 255, 0) 100%);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			border-radius: 12px;
+			backdrop-filter: blur(2px);
+		}
+		.single-img,
+		.double-img {
+			margin: 0;
+			height: 200px;
+		}
+		.single > .content,
+		.double > .content {
+			margin: 0;
+			max-width: 276px;
+		}
+
 		h2 {
-			font-size: 20px;
-			line-height: 20px;
+			font-size: 32px;
+			line-height: 32px;
 		}
 		p
 		{
-			font-size: 12px;
-			line-height: 18px;
+			font-size: 16px;
+			line-height: 22px;
 		}
 	}
 </style>
