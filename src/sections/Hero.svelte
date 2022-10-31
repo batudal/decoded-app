@@ -1,14 +1,35 @@
+<script>
+	import { bind } from "svelte/internal";
+
+	let innerWidth = 0;
+</script>
+
+<svelte:window bind:innerWidth />
 <div class="container">
 	<div class="hero">
 		<!-- !! WE NEED TO MERGE H1's INTO ONE FOR SEO-->
 		<div class="line">
-			<h1 class="font-white t-large z-bottom">Join the radical</h1>
+			<img
+			src= {innerWidth > 567 ? 
+			"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-1-large.webp" :
+			"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-1-small.webp"}
+			alt="Join the radical"
+			/>		
 		</div>
-		<img
-			src="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/pill.webp"
-			alt="a holographic pill"
-		/>
-		<div class="line"><h1 class="font-white t-large z-top">revolution today.</h1></div>
+		<div class="pill">
+			<img
+			src= {innerWidth > 567 ? 
+				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-2-large.webp" :
+				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-2-small.webp"}				alt="a holographic pill"
+			/>
+		</div>
+		<div class="line z-top">
+			<img
+			src= {innerWidth > 567 ? 
+				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-3-large.webp" :
+				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-3-small.webp"}			alt="revoliution today"
+			/>
+		</div>
 	</div>
 	<span class="description"
 		>Decoded Labs is a developer collective committed to safeguard your ventures into the ambigous
@@ -32,6 +53,10 @@
 		align-items: center;
 		justify-content: center;
 	}
+	img {
+		width: 100%;
+		max-width: 440px;
+	}
 	.description {
 		max-width: 480px;
 		font-family: 'Jost';
@@ -43,35 +68,18 @@
 		text-align: center;
 		color: rgba(255, 255, 255, 0.8);
 	}
-	h1 {
-		position: relative;
-		z-index: 1;
-		transition: 0.3s ease;
-	}
-	img {
-		position: absolute;
-		z-index: 1;
-		margin-top: 50px;
-		width: 180px;
+	.pill {
+		z-index: 2;
+		margin-top: -48%;
 	}
 	.z-top {
 		z-index: 3;
-	}
-	@media (max-width: 767px) {
-		img {
-			width: 140px;
-			bottom: 36%;
-		}
+		margin-top: -48%;
 	}
 
-	@media (max-width: 567px) {
+	@media (max-width: 480px) {
 		img {
-			width: 100px;
-			bottom: 42%;
-		}
-		h1 {
-			font-size: 40px;
-			line-height: 60px;
+			max-width: 320px;
 		}
 		.description {
 			font-size: 13px;
