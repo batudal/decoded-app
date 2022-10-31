@@ -24,6 +24,7 @@
 	}
 	img {
 		width: 320px;
+		margin: 0 auto;
 	}
 	h3 {
 		font-family: 'Jost';
@@ -66,7 +67,6 @@
 		a {
 			width: 320px;
 			height: 320px;
-			padding: 20px 12px 16px;
 		}
 		img {
 			width: 260px;
