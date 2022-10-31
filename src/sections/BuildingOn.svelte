@@ -1,4 +1,4 @@
-<main>
+<div class="networks">
 	<p>Currently building on</p>
 	<div class="images">
 		{#each Array(8) as _, i}
@@ -10,7 +10,7 @@
 			/>
 		{/each}
 	</div>
-</main>
+</div>
 
 <style>
 	p {
@@ -23,7 +23,7 @@
 		color: rgba(255, 255, 255, 0.8);
 		margin: 0px;
 	}
-	main {
+	.networks {
 		width: 80%;
 		max-width: 800px;
 		height: 60px;
@@ -31,6 +31,7 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		margin-bottom: 160px;
 	}
 	.images {
 		display: flex;
@@ -41,7 +42,7 @@
 	}
 
 	@media (max-width:867px) {
-		main {
+		.networks {
 			flex-direction: column;
 			gap:32px;
 		}

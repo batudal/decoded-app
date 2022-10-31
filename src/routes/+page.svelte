@@ -26,7 +26,6 @@
 <Projects />
 <div style="height:40px" />
 <BuildingOn />
-<div style="height:160px" />
 <StrategicNeeds />
 <div style="height:60px" />
 <Technologies />
