@@ -8,7 +8,7 @@
 <svelte:window bind:innerWidth />
 <h4 class="gradient-text">NEVERMIND THE OBSTACLES</h4>
 <main>
-	{#if innerWidth > 567}
+	{#if innerWidth > 589}
 	<GradientCard
 		layout="single"
 		title="Specialized Partner Network"
@@ -22,7 +22,7 @@
 		image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/obs-1.webp"
 	/>
 	{/if}
-	{#if innerWidth > 567}
+	{#if innerWidth > 589}
 	<GradientCard
 		layout={innerWidth > 1000 ? "double" : "single"}
 		title="Longterm Support"
@@ -36,7 +36,7 @@
 		image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/obs-2.webp"
 	/>
 	{/if}
-	{#if innerWidth > 567}
+	{#if innerWidth > 589}
 	<GradientCard
 		layout={innerWidth > 1000 ? "double" : "single"}
 		title="Quality Assurance"

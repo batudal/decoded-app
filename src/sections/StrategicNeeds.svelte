@@ -9,7 +9,7 @@
 
 <h4 id="services" class="gradient-text">WE’LL COVER YOUR STRATEGIC NEEDS</h4>
 <main>
-	{#if innerWidth > 567}
+	{#if innerWidth > 589}
 	<GradientCard
 		layout="single"
 		title="Decentralized App Development"
@@ -24,7 +24,7 @@
 	/>
 	{/if}
 
-	{#if innerWidth > 567}
+	{#if innerWidth > 589}
 	<GradientCard
 		layout= {innerWidth > 1017 ? "double" : "single"}
 		title="Security Audits"
@@ -38,7 +38,7 @@
 	image="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/service-2.webp"
 	/>
 	{/if}
-	{#if innerWidth > 567}
+	{#if innerWidth > 589}
 	<GradientCard
 		layout={innerWidth > 1017 ? "double" : "single"}
 		title="Private Network"
