@@ -20,14 +20,16 @@
 			<img
 			src= {innerWidth > 567 ? 
 				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-2-large.webp" :
-				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-2-small.webp"}				alt="a holographic pill"
+				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-2-small.webp"}
+				alt="a holographic pill"
 			/>
 		</div>
 		<div class="line z-top">
 			<img
 			src= {innerWidth > 567 ? 
 				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-3-large.webp" :
-				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-3-small.webp"}			alt="revoliution today"
+				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-3-small.webp"}			
+				alt="revoliution today"
 			/>
 		</div>
 	</div>
