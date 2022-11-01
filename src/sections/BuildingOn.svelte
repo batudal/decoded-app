@@ -48,7 +48,8 @@
 	}
 	@media (max-width:567px) {
 		.images {
-			flex-wrap: wrap;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
 		}
 	}
 </style>
