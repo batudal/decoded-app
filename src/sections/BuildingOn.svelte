@@ -26,7 +26,6 @@
 	.networks {
 		width: 80%;
 		max-width: 800px;
-		height: 60px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
