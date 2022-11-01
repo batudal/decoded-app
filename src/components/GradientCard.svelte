@@ -7,12 +7,13 @@
 </script>
 
 <main class={`${layout}`}>
-	<img src={image} alt="" class={image_margin} />
-	<div class="content">
-		<h2>{title}</h2>
-		<div style="height:12px;" />
-		<p>{desc}</p>
-	</div>
+		<div class="img-container">
+			<img src={image} alt="" class={image_margin} />
+		</div>
+		<div class="content">
+			<h2>{title}</h2>
+			<p>{desc}</p>
+		</div>
 </main>
 
 <style>
@@ -34,6 +35,10 @@
 	.double > .content {
 		margin-left: 117px;
 	}
+
+	h2 {
+		margin-bottom: 12px;
+	}
 	img {
 		position: absolute;
 		height: 240px;
@@ -52,4 +57,9 @@
 		align-items: flex-start;
 		justify-content: center;
 	}
+	p {
+		margin: 0;
+	}
+
+
 </style>

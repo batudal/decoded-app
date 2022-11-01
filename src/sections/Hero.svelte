@@ -1,21 +1,44 @@
+<script>
+	import { bind } from "svelte/internal";
+
+	let innerWidth = 0;
+</script>
+
+<svelte:window bind:innerWidth />
 <div class="container">
 	<div class="hero">
 		<!-- !! WE NEED TO MERGE H1's INTO ONE FOR SEO-->
 		<div class="line">
-			<h1 class="font-white t-large z-bottom font-semi-bold">Join the radical</h1>
+			<img
+			src= {innerWidth > 567 ? 
+			"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-1-large.webp" :
+			"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-1-small.webp"}
+			alt="Join the radical"
+			/>		
 		</div>
-		<img
-			src="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/pill.webp"
-			alt="a holographic pill"
-		/>
-		<div class="line"><h1 class="font-white t-large z-top">revolution today.</h1></div>
+		<div class="pill">
+			<img
+			src= {innerWidth > 567 ? 
+				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-2-large.webp" :
+				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-2-small.webp"}
+				alt="a holographic pill"
+			/>
+		</div>
+		<div class="line z-top">
+			<img
+			src= {innerWidth > 567 ? 
+				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-3-large.webp" :
+				"https://decoded-files.fra1.digitaloceanspaces.com/web-assets/landing/hero-3-small.webp"}			
+				alt="revoliution today"
+			/>
+		</div>
 	</div>
-	<span
+	<span class="description"
 		>Decoded Labs is a developer collective committed to safeguard your ventures into the ambigous
 		decentralized world.
 	</span>
 	<a class="button" href="#contact">
-		<p>Let’s talk about your web3 project</p>
+		<p class="button-text">Let’s talk about your web3 project</p>
 	</a>
 </div>
 
@@ -32,7 +55,11 @@
 		align-items: center;
 		justify-content: center;
 	}
-	span {
+	img {
+		width: 100%;
+		max-width: 440px;
+	}
+	.description {
 		max-width: 480px;
 		font-family: 'Jost';
 		font-style: normal;
@@ -41,34 +68,30 @@
 		line-height: 24px;
 		margin-top: 32px;
 		text-align: center;
-
 		color: rgba(255, 255, 255, 0.8);
 	}
-	h1 {
-		position: relative;
-		z-index: 1;
-		transition: 0.3s ease;
-	}
-	img {
-		position: absolute;
-		z-index: 1;
-		margin-top: 50px;
-		width: 180px;
-	}
-	@media (max-width: 767px) {
-		img {
-			width: 140px;
-			bottom: 37%;
-		}
-	}
-
-	@media (max-width: 567px) {
-		img {
-			width: 100px;
-			bottom: 44%;
-		}
+	.pill {
+		z-index: 2;
+		margin-top: -48%;
 	}
 	.z-top {
 		z-index: 3;
+		margin-top: -48%;
 	}
+
+	@media (max-width: 480px) {
+		img {
+			max-width: 320px;
+		}
+		.description {
+			font-size: 13px;
+			line-height: 24px;
+			max-width: 236px;
+			margin-top: 0;
+		}
+		.button-text {
+			font-size: 13px;
+		}
+	}
+
 </style>

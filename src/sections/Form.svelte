@@ -27,10 +27,9 @@
 	const handleFOI = (event: any) => (foi = event.detail.text);
 </script>
 
-<main id="contact">
+<div id="contact" class="contacts">
 	<div style="height:120px;" />
-	<h1>Let's talk business.</h1>
-	<div style="height:36px;" />
+	<h2>Let's talk business.</h2>
 	<div class="form-group">
 		<input bind:value={email} type="text" placeholder="Enter your email" required />
 		<Dropdown on:foi={handleFOI} />
@@ -40,13 +39,11 @@
 		</div>
 	</div>
 	<div style="height:120px;" />
-</main>
+</div>
 
 <style>
-	main {
+	.contacts {
 		width: 100%;
-		background: rgba(0, 0, 0, 0.8);
-		backdrop-filter: blur(2px);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -59,12 +56,22 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 12px;
+		gap: 10px;
+		width: 70%;
+		max-width: 664px;
+	}
+	h2 {
+		margin-bottom: 36px;
+		font-weight: 600;
+		font-size: 64px;
+		line-height: 80px;
+		text-align: center;
+		letter-spacing: -0.05em;
 	}
 	input,
 	textarea {
 		box-sizing: border-box;
-		width: 600px;
+		width: 100%;
 		background: rgba(0, 0, 0, 0.3);
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		border-radius: 8px;
@@ -83,6 +90,28 @@
 		height: 180px;
 	}
 	.button {
-		width: 600px;
+		width: 100%;
+	}
+	@media (max-width:567px) {
+		h2 {
+			font-size: 48px;
+			line-height: 60px;
+			margin-bottom: 28px;
+		}
+		input,
+		textarea {
+			font-size: 16px;
+			line-height: 32px;
+		}
+		p {
+			font-size: 13px;
+			line-height: 32px;
+		}
+	}
+
+	@media (max-width:480px) {
+		h2 {
+			max-width: 267px;
+		}
 	}
 </style>
