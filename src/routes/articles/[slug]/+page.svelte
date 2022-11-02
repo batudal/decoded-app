@@ -53,7 +53,6 @@
 		align-items: flex-start;
 		flex-wrap: wrap;
 		min-width: 0;
-		overflow:auto;
 	}
 	img {
 		max-width: 100%;
