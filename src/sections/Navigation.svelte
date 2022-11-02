@@ -73,7 +73,7 @@
 		}
 	
 		button:focus {
-			outline: #fff solid 3px;
+			outline: #fff solid 1px;
 		}
 		.fa-bars {
 			display: block;

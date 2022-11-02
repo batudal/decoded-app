@@ -10,10 +10,11 @@
 	<title>
 		{data.title}
 	</title>
+	<script src="https://kit.fontawesome.com/db2f0fb407.js" crossorigin="anonymous"></script>
+
 </svelte:head>
 
 <div class="container">
-	<main>
 		<div style="height:160px" />
 		<h4>{data.category}</h4>
 		<h1>{data.title}</h1>
@@ -30,7 +31,7 @@
 			{:else if obj.type == 'code'}
 				<pre class="language-solidity">
 					{@html Prism.highlight(obj.content, Prism.languages.javascript, 'solidity')}
-			</pre>
+				</pre>
 			{:else}
 				<svelte:element this={obj.type}>
 					{obj.content}
@@ -40,25 +41,23 @@
 		<div style="height:72px" />
 		<RelatedCards posts={data.related_posts} />
 		<div style="height:96px" />
-	</main>
 </div>
 
 <style>
 	.container {
+		width: 80%;
 		max-width: 800px;
 		padding: 0 80px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-	}
-	main {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
+		flex-wrap: wrap;
+		min-width: 0;
+		overflow:auto;
 	}
 	img {
-		width: 100%;
+		max-width: 100%;
+		height: auto;
 		margin: 0 0 36px;
 	}
 	.info {
@@ -91,7 +90,9 @@
 		letter-spacing: -0.05em;
 		color: #ffffff;
 	}
-
+	h2 {
+		margin-bottom: 24px;
+	}
 	h4 {
 		color: #44f1a6;
 	}
@@ -102,20 +103,23 @@
 	}
 
 	.callout-container {
-		display: flex;
-		justify-content: center;
-		gap: 10px;
-		padding: 12px;
 		background: #151515;
 		backdrop-filter: blur(2.5px);
 		border-radius: 8px;
-		width: 100%;
-		margin: 16px 0 40px;
 		box-sizing: border-box;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+		padding: 12px;
+		margin: 16px 0 40px;
+		width: 100%;
 	}
 
 	pre {
 		margin: 0 0 40px;
-		width: 800px;
+		width: 100%;
+		max-width: 800px;
 	}
+
 </style>
