@@ -45,7 +45,6 @@
 
 <style>
 	.container {
-		width: 80%;
 		max-width: 800px;
 		padding: 0 80px;
 		display: flex;
@@ -119,6 +118,7 @@
 		margin: 0 0 40px;
 		width: 100%;
 		max-width: 800px;
+		overflow: auto;
 	}
 
 	@media (max-width:833px) {
@@ -128,13 +128,13 @@
 	}
 	@media (max-width:567px) {
 		img {
-		height: 200px;
-		object-fit: cover;
+			height: 200px;
+			object-fit: cover;
 	}
 	}
 	@media (max-width:420px) {
 		img {
-		height: 150px;
+			height: 150px;
 	}
 	}
 </style>
