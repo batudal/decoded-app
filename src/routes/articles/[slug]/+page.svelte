@@ -121,4 +121,20 @@
 		max-width: 800px;
 	}
 
+	@media (max-width:833px) {
+		.callout-container {
+			justify-content: flex-start;
+		}
+	}
+	@media (max-width:567px) {
+		img {
+		height: 200px;
+		object-fit: cover;
+	}
+	}
+	@media (max-width:420px) {
+		img {
+		height: 150px;
+	}
+	}
 </style>
