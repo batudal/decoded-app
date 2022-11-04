@@ -19,7 +19,7 @@
 	<a href="/articles/hacks-reentrancy">
 		<div class="post-info">
 			<h4>SECURITY/HACKS</h4>
-			<span>written by @ReddKidd on 18/02/22</span>
+			<span class="info">written by @ReddKidd on 18/02/22</span>
 		</div>
 		<div class="card">
 			<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0c7cef39-c899-45db-829a-a7f127c58c5f/girl-robot_%281%29.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221104%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221104T090423Z&X-Amz-Expires=3600&X-Amz-Signature=2669a0a569fa30554466ba2f9bfef76bb0ee7daa438e74a8272c90796848e42b&X-Amz-SignedHeaders=host&x-id=GetObject" 
@@ -33,6 +33,9 @@
 </div>
 
 <style>
+	a {
+		width: 100%;
+	}
 	.card {
 		width: 100%;
 		max-width: 800px;
@@ -48,7 +51,7 @@
 		width: 100%;
 		margin-bottom: 18px;
 	}
-	span {
+	.info {
 		font-family: 'Fira Code';
 		font-style: normal;
 		font-weight: 400;
@@ -84,7 +87,7 @@
 		gap:20px;
 		width: 100%;
 		max-width: 688px;
-		padding-left: 48px;
+		/* padding-left: 48px; */
 		
 	}
 	p {
@@ -95,5 +98,32 @@
 		line-height: 24px;
 		/* or 185% */
 		color: rgba(255, 255, 255, 0.8);
+	}
+
+	@media (max-width:567px) {
+		.post-info {
+			flex-direction: column;
+			gap:8px;
+		}
+		h2 {
+			font-size: 36px;
+			line-height: 60px;
+		}
+		h4,
+		.info,
+		p {
+			font-size: 12px;
+		}
+		img {
+			height: 200px;
+		}
+		.description {
+			gap:12px;
+		}
+	}
+	@media (max-width:420px) {
+		img {
+			height: 150px;
+	}
 	}
 </style>

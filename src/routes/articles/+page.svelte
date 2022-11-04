@@ -10,5 +10,6 @@
 <style>
     .container {
         margin-top: 240px;
+        padding: 0 20px;
     }
 </style>
