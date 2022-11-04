@@ -126,6 +126,13 @@
 			justify-content: flex-start;
 		}
 	}
+	
+	@media (max-width:767px) {
+		h4,
+		.info {
+			font-size: 12px;
+		}
+	}
 	@media (max-width:567px) {
 		img {
 			height: 200px;
