@@ -118,7 +118,7 @@
 		margin: 0 0 40px;
 		width: 100%;
 		max-width: 800px;
-		overflow: auto;
+		white-space: pre-wrap;
 	}
 
 	@media (max-width:833px) {
