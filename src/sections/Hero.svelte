@@ -7,7 +7,6 @@
 <svelte:window bind:innerWidth />
 <div class="container">
 	<div class="hero">
-		<!-- !! WE NEED TO MERGE H1's INTO ONE FOR SEO-->
 		<div class="line">
 			<img
 			src= {innerWidth > 567 ? 
