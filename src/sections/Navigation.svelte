@@ -1,15 +1,17 @@
 <div class="container">
 	<nav>
-		<img
-			src="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/logo.webp"
-			alt="logo"
-		/>
+		<a href="/">
+			<img
+				src="https://decoded-files.fra1.cdn.digitaloceanspaces.com/web-assets/landing/logo.webp"
+				alt="logo"
+			/>
+		</a>
 		<div class="menu">
-			<a title="Projects" class="active" href="#projects">Projects</a>
-			<a title="Atelier" class="active" href="#projects">Atelier</a>
-			<a title="Articles" href="#services">Articles</a>
-			<a title="Services" href="#services">Services</a>
-			<a title="Contact" href="#contact">Contact</a>
+			<a title="Projects" class="active" href="/#projects">Projects</a>
+			<a title="Atelier"  href="/#projects">Atelier</a>
+			<a title="Articles" href="/articles">Articles</a>
+			<a title="Services" href="/#services">Services</a>
+			<a title="Contact" href="/#contact">Contact</a>
 		</div>
 		<button><i class="fa-sharp fa-solid fa-bars"></i></button>
 	</nav>
