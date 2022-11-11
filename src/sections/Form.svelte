@@ -7,7 +7,6 @@
 
 	const postData = async () => {
 		if (!foi) {
-			console.log('Foi:', foi);
 			return;
 		} else {
 			const res = await fetch('https://api.decoded-labs.com/api/collections/submission/records', {
@@ -21,7 +20,6 @@
 			});
 			const json = await res.json();
 			result = JSON.stringify(json);
-			console.log(result);
 		}
 	};
 	const handleFOI = (event: any) => (foi = event.detail.text);
@@ -92,7 +90,7 @@
 	.button {
 		width: 100%;
 	}
-	@media (max-width:567px) {
+	@media (max-width: 567px) {
 		h2 {
 			font-size: 48px;
 			line-height: 60px;
@@ -109,7 +107,7 @@
 		}
 	}
 
-	@media (max-width:480px) {
+	@media (max-width: 480px) {
 		h2 {
 			max-width: 267px;
 		}
