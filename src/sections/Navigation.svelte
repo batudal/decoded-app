@@ -26,7 +26,7 @@
 		position: fixed;
 		z-index: 100;
 		width: 100vw;
-		height: 160px;
+		height: 120px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

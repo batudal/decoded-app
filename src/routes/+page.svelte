@@ -20,16 +20,27 @@
 	<script src="https://kit.fontawesome.com/db2f0fb407.js" crossorigin="anonymous"></script>
 </svelte:head>
 
-<div style="height:240px" />
-<Hero />
-<div style="height:160px" />
-<Projects />
-<div style="height:40px" />
-<BuildingOn />
-<StrategicNeeds />
-<div style="height:60px" />
-<Technologies />
-<div style="height:60px" />
-<Features />
-<TrustedBy />
-<Form />
+<main>
+	<div style="height:240px" />
+	<Hero />
+	<div style="height:160px" />
+	<Projects />
+	<div style="height:40px" />
+	<BuildingOn />
+	<StrategicNeeds />
+	<div style="height:60px" />
+	<Technologies />
+	<div style="height:60px" />
+	<Features />
+	<TrustedBy />
+	<Form />
+</main>
+
+<style>
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+</style>

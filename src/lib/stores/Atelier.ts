@@ -14,4 +14,4 @@ export const template_id = writable(-1);
 export const name = writable('');
 export const symbol = writable('');
 export const premint_amount = writable('');
-export const options = writable([]);
+export const options = writable(['']);

@@ -35,7 +35,7 @@
 			</div>
 			<div class="property">
 				<div class="prop">Features:</div>
-				<div class="value">{$options}</div>
+				<div class="value">{$options.slice(1)}</div>
 			</div>
 			<div class="property">
 				<div class="prop">Transaction cost:</div>

@@ -3,8 +3,8 @@
 	import Template from '$lib/components/Atelier/Template/Template.svelte';
 	import Features from '$lib/components/Atelier/Features/Features.svelte';
 	import Deploy from '$lib/components/Atelier/Deploy/Deploy.svelte';
-
 	import { stage } from '$lib/stores/Atelier';
+
 	const stages = [
 		{ title: 'network', component: Network },
 		{ title: 'template', component: Template },
