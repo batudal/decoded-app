@@ -26,7 +26,6 @@
 		<Option title="Decoded Labs" icon="decoded.webp" />
 		<div style="height: 8px;" />
 		<Option title="Starknet" icon="starknet.webp" />
-		<div style="height: 8px;" />
 	</div>
 	<Progress />
 </div>

@@ -37,9 +37,13 @@
 			</div>
 		</div>
 	</div>
-	<div class={`button ${$stage_fulfilled ? 'button-fulfilled' : ''}`} on:click={next} on:keydown>
-		Next
-	</div>
+	{#if $stage >= 3}
+		<div class="button button-fulfilled">Deploy</div>
+	{:else}
+		<div class={`button ${$stage_fulfilled ? 'button-fulfilled' : ''}`} on:click={next} on:keydown>
+			Next
+		</div>
+	{/if}
 </main>
 
 <style>

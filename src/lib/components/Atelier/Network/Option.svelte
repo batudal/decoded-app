@@ -17,7 +17,7 @@
 			alt="Network Icon"
 		/>
 		<div style="width: 8px;" />
-		<p style="margin:0px">{title}</p>
+		<p>{title}</p>
 	</div>
 </div>
 
@@ -31,6 +31,7 @@
 		border-radius: 12px;
 		justify-content: space-between;
 		cursor: pointer;
+		box-sizing: border-box;
 	}
 	.option:hover {
 		background: rgba(255, 255, 255, 0.04);
@@ -42,6 +43,14 @@
 	}
 	.chosen {
 		background: rgba(255, 255, 255, 0.06);
-		border: 1px solid #44f1a6;
+	}
+	p {
+		font-family: 'Fira Code';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		color: #ffffff;
+		margin: 0px;
 	}
 </style>

@@ -3,6 +3,7 @@
 	import Option from './Option.svelte';
 	import { stage_fulfilled } from '$lib/stores/Atelier';
 	import { onMount } from 'svelte';
+	import { getStores } from '$app/stores';
 
 	onMount(() => {
 		stage_fulfilled.set(false);
@@ -18,6 +19,7 @@
 		<p>
 			Pick your contract template. For more information follow the external links to our blog posts.
 		</p>
+		<div style="height: 20px;" />
 		<Option title="ERC20" id={0} />
 		<div style="height: 8px;" />
 		<Option title="ERC721" id={1} />
