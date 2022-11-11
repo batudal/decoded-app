@@ -14,7 +14,12 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		alias: {
+			'global.css': 'src/global.css',
+			'prism-theme.css': 'src/prism-theme.css',
+			$src: 'src'
+		}
 	}
 };
 

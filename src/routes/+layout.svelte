@@ -1,4 +1,5 @@
 <script>
+	import 'global.css';
 	import Header from '../sections/Navigation.svelte';
 	import Footer from '../sections/Footer.svelte';
 </script>

@@ -32,6 +32,7 @@
 		border-top: 1px solid rgba(255, 255, 255, 0.1);
 		width: 100%;
 		background: rgba(0, 0, 0, 0.8);
+		margin-top: auto;
 	}
 	main {
 		width: 80%;

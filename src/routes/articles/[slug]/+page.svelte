@@ -1,6 +1,5 @@
 <script lang="ts">
-	import '../../../global.css';
-	import '../../../prism-theme.css';
+	import 'prism-theme.css';
 	import Prism from 'prismjs';
 	import RelatedCards from '../../../components/RelatedCards.svelte';
 	export let data: any;
@@ -10,37 +9,35 @@
 	<title>
 		{data.title}
 	</title>
-	<script src="https://kit.fontawesome.com/db2f0fb407.js" crossorigin="anonymous"></script>
-
 </svelte:head>
 
 <div class="container">
-		<div style="height:160px" />
-		<h4>{data.category}</h4>
-		<h1>{data.title}</h1>
-		{#each data.objects as obj}
-			{#if obj.type == 'img'}
-				<img src={obj.content} alt="" />
-			{:else if obj.type == 'to_do'}
-				<p class="info">{obj.content}</p>
-			{:else if obj.type == 'callout'}
-				<div class="callout-container">
-					<span class="callout-text">{obj.content}</span>
-					<a href={obj.url} class="callout-link callout-text">{obj.linkText}</a>
-				</div>
-			{:else if obj.type == 'code'}
-				<pre class="language-solidity">
+	<div style="height:160px" />
+	<h4>{data.category}</h4>
+	<h1>{data.title}</h1>
+	{#each data.objects as obj}
+		{#if obj.type == 'img'}
+			<img src={obj.content} alt="" />
+		{:else if obj.type == 'to_do'}
+			<p class="info">{obj.content}</p>
+		{:else if obj.type == 'callout'}
+			<div class="callout-container">
+				<span class="callout-text">{obj.content}</span>
+				<a href={obj.url} class="callout-link callout-text">{obj.linkText}</a>
+			</div>
+		{:else if obj.type == 'code'}
+			<pre class="language-solidity">
 					{@html Prism.highlight(obj.content, Prism.languages.javascript, 'solidity')}
 				</pre>
-			{:else}
-				<svelte:element this={obj.type}>
-					{obj.content}
-				</svelte:element>
-			{/if}
-		{/each}
-		<div style="height:72px" />
-		<RelatedCards posts={data.related_posts} />
-		<div style="height:96px" />
+		{:else}
+			<svelte:element this={obj.type}>
+				{obj.content}
+			</svelte:element>
+		{/if}
+	{/each}
+	<div style="height:72px" />
+	<RelatedCards posts={data.related_posts} />
+	<div style="height:96px" />
 </div>
 
 <style>
@@ -121,27 +118,27 @@
 		white-space: pre-wrap;
 	}
 
-	@media (max-width:833px) {
+	@media (max-width: 833px) {
 		.callout-container {
 			justify-content: flex-start;
 		}
 	}
-	
-	@media (max-width:767px) {
+
+	@media (max-width: 767px) {
 		h4,
 		.info {
 			font-size: 12px;
 		}
 	}
-	@media (max-width:567px) {
+	@media (max-width: 567px) {
 		img {
 			height: 200px;
 			object-fit: cover;
+		}
 	}
-	}
-	@media (max-width:420px) {
+	@media (max-width: 420px) {
 		img {
 			height: 150px;
-	}
+		}
 	}
 </style>
