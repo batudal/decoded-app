@@ -2,7 +2,6 @@
     import '../../global.css';
     import ArticleCard from "../../components/ArticleCard.svelte";
 	export let data: any;
-	console.log(data.all_posts);
 </script>
 
 <svelte:head>
