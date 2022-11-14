@@ -136,7 +136,6 @@ const getRelatedPosts = async (slug: string) => {
 			} else if (parsedJSON.results[i].type == 'to_do' && date == null) {
 				//@ts-ignore
 				let fulldate = parsedJSON.results[i].to_do.rich_text[0].plain_text.split(' ');
-				console.log(fulldate);
 				date = fulldate[4];
 				//@ts-ignore
 			} else if (parsedJSON.results[i].type == 'image' && src == null) {
