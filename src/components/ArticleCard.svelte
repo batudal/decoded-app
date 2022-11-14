@@ -8,11 +8,11 @@
 	<a href={`/articles/${post.slug}`}>
 		<div class="post-info">
 			<h2>{post.title}</h2>
-			<h4>SECURITY/HACKS</h4>
+			<h4>{post.category}</h4>
 		</div>
 		<div class="card">
 			<div class="description">
-				<p>As well known, smart contracts have been notoriously vulnerable to exploits. There hasn't been a period in which no smart contract has not been exploi			
+				<p>{post.description}</p>
 				<span class="info">{post.info}</span>
 			</div>
 		</div>

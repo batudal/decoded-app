@@ -36,7 +36,7 @@ const getAllPosts = async () => {
 	}
 	for (let i = 0; i < all_ids.length; i++) {
 		let parsedJSON = JSON.parse(await getSerializedJSON(all_ids[i]));
-		let title, info;
+		let title, info, category, description;
 		for (let i = 0; i < parsedJSON.results.length; i++) {
 			if (parsedJSON.results[i].type == 'heading_1' && title == null) {
 				//@ts-ignore
@@ -46,12 +46,22 @@ const getAllPosts = async () => {
 				//@ts-ignore
 				info = parsedJSON.results[i].to_do.rich_text[0].plain_text;
 				//@ts-ignore
-			} 
+			} else if (parsedJSON.results[i].type == 'toggle' && category == null) {
+				//@ts-ignore
+				category = parsedJSON.results[i].toggle.rich_text[0].plain_text;
+			}
+			else if (parsedJSON.results[i].type == 'paragraph' && 
+			parsedJSON.results[i].paragraph.rich_text[0] &&
+			description == null) {
+				description = parsedJSON.results[i].paragraph.rich_text[0].plain_text
+			}
 		}
 		all_posts.push({
 			title: title,
 			info: info,
-			slug: all_slugs[i]
+			slug: all_slugs[i],
+			category: category,
+			description: description
 		});
 	}
 	await redis_client.close();

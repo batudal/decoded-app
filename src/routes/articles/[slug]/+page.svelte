@@ -71,6 +71,10 @@
 		color: rgb(255, 255, 255, 0.4);
 		margin: 0 0 48px;
 	}
+	h2 {
+		margin: 0 0 24px;
+
+	}
 	p {
 		font-family: 'Fira Code';
 		font-style: normal;

@@ -17,7 +17,7 @@
 
 <style>
     .container {
-        margin-top: 220px;
+        margin-top: 200px;
         padding: 0 20px;
     }
     .categories {
