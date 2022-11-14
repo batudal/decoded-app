@@ -7,7 +7,10 @@ dotenv.config();
 const redis_client = new redis_Client();
 
 export const load: PageServerLoad = async () => {
-	await getAllPosts();
+	let all_posts = await getAllPosts();
+	return {
+		all_posts
+	}
 };
 
 const getSerializedJSON = async (databaseId: string) => {
