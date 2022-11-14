@@ -15,6 +15,7 @@
 				<p>As well known, smart contracts have been notoriously vulnerable to exploits. There hasn't been a period in which no smart contract has not been exploi			
 				<span class="info">{post.info}</span>
 			</div>
+		</div>
 	</a>
 	{/each}
 </div>
