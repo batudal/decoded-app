@@ -20,8 +20,5 @@
 		background: rgba(255, 255, 255, 0.04);
 		border-radius: 20px;
 	}
-	.form {
-	}
-	.progress {
-	}
+
 </style>

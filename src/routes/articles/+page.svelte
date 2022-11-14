@@ -1,6 +1,8 @@
-<script>
+<script lang="ts">
     import '../../global.css';
     import ArticleCard from "../../components/ArticleCard.svelte";
+	export let data: any;
+	console.log(data.all_posts);
 </script>
 
 <div class="container">
@@ -10,7 +12,7 @@
         <span>OPTIMIZATION</span>
         <span>DAPPS</span>
     </div>
-    <ArticleCard />
+    <ArticleCard posts={data.all_posts}/>
 </div>
 
 <style>

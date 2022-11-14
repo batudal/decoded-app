@@ -1,34 +1,22 @@
 <script lang="ts">
-	// export let post: any;
+	export let posts: any;
 </script>
 
-<!-- <div>
-	<a href={`/articles/${post.slug}`}>
-		<div class="card">
-			<div class="post-info">
-				<h4>{post.category}</h4>
-				<p>{post.info}</p>
-			</div>
-			<div class="cover" style={`background-image: url(${post.src})`} />
-			<h2>{post.title}</h2>
-			<p>{post.description}</p>
-		</div>
-	</a>
-</div> -->
 <div>
+	{#each posts as post}
 	<div class="line"></div>
-	<a href="/articles/hacks-reentrancy">
+	<a href={`/articles/${post.slug}`}>
 		<div class="post-info">
-			<h2>Re-entrancy</h2>
+			<h2>{post.title}</h2>
 			<h4>SECURITY/HACKS</h4>
 		</div>
 		<div class="card">
 			<div class="description">
-				<p>As well known, smart contracts have been notoriously vulnerable to exploits. There hasn't been a period in which no smart contract has not been exploited in the near...</p>
-				<span class="info">written by @ReddKidd on 18/02/22</span>
+				<p>As well known, smart contracts have been notoriously vulnerable to exploits. There hasn't been a period in which no smart contract has not been exploi			
+				<span class="info">{post.info}</span>
 			</div>
-		</div>
 	</a>
+	{/each}
 </div>
 
 <style>
