@@ -5,6 +5,7 @@
 <div>
 	<h4>RELATED ARTICLES</h4>
 	<div style="height:16px" />
+	<div class="cards-container">
 	{#each posts as post}
 		<a href={`/articles/${post.slug}`}>
 			<div class="card">
@@ -16,9 +17,17 @@
 			</div>
 		</a>
 	{/each}
+	</div>
 </div>
 
 <style>
+	.cards-container {
+		display: flex;
+		width: 100%;
+		justify-content: flex-start;
+		gap:18px;
+		flex-wrap: wrap;
+	}
 	.card {
 		height: 240px;
 		width: 256px;
