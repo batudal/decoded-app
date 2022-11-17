@@ -7,8 +7,12 @@
 
 <svelte:head>
 	<title>
-		{data.title}
+		{data.title} | Decoded Labs
 	</title>
+	<meta
+	name="description"
+	content="Decoded Labs provides many public tools and premium services such as; decentralized app, smart contract and private blockchain network development."
+	/>
 </svelte:head>
 
 <div class="container">
