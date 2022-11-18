@@ -11,7 +11,7 @@
 	</title>
 	<meta
 	name="description"
-	content="Decoded Labs provides many public tools and premium services such as; decentralized app, smart contract and private blockchain network development."
+	content={data.description}
 	/>
 </svelte:head>
 

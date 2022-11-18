@@ -76,11 +76,15 @@ export const load: PageServerLoad = async ({ params }) => {
 			});
 		}
 	}
+	let description = await getDescriptions(params.slug);
 	let related_posts = await getRelatedPosts(params.slug);
+	await redis_client.close();
+
 	return {
 		objects,
 		title,
 		category,
+		description,
 		related_posts
 	};
 };
@@ -152,6 +156,23 @@ const getRelatedPosts = async (slug: string) => {
 	}
 	return related_posts;
 };
+const getDescriptions = async (slug: string) => {
+	if (!redis_client.isOpen()) {
+	await redis_client.open(process.env.REDIS_URL);
+	}
+let result = await redis_client.execute(['HGETALL', 'descriptions']);
+let description_text;
+	//@ts-ignore
+	for (let i = 0; i < result.length / 2; i++) {
+		//@ts-ignore
+		let split_text = [result[i * 2]];
+		if (split_text[0] == slug) {
+			//@ts-ignore
+			description_text = result[i * 2 + 1];
+		}
+	}
+	return description_text;
+}
 
 const getJSON = async (slug: string) => {
 	if (!redis_client.isOpen()) {
