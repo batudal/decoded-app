@@ -7,8 +7,12 @@
 
 <svelte:head>
 	<title>
-		{data.title}
+		{data.title} | Decoded Labs
 	</title>
+	<meta
+	name="description"
+	content={data.description}
+	/>
 </svelte:head>
 
 <div class="container">

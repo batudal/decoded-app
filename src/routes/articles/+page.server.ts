@@ -11,6 +11,7 @@ export const load: PageServerLoad = async () => {
 	return {
 		all_posts
 	}
+	
 };
 
 const getSerializedJSON = async (databaseId: string) => {
@@ -67,3 +68,5 @@ const getAllPosts = async () => {
 	await redis_client.close();
 	return all_posts;
 };
+
+
